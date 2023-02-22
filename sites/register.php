@@ -6,8 +6,8 @@
     <?php
         $con = new mysqli("127.0.0.1","root","","rental");
         echo '<form method="POST">';
-        $res = $con->query("SELECT * FROM user");
-        $cos = $res->fetch_all();
+        // $res = $con->query("SELECT * FROM user");
+        // $cos = $res->fetch_all();
 
         echo '<center><div class="blokGlowny"><h1>Rejestracja:</h1>
         <section class="box"><br> Imię: <input name="imie"></section>
@@ -18,7 +18,7 @@
         {
             if($_POST['Email']!="" && $_POST['password']!="")
             {
-                $sqlquery = "INSERT INTO `user` VALUES ('".count($cos)."','".$_POST["imie"]."','".$_POST["nazwisko"]."', '".$_POST['password']."', '".$_POST['Email']."', '0');";
+                $sqlquery = "INSERT INTO `user` (Imie,Nazwisko,Password,Email,`is_admin?`) VALUES ('".$_POST["imie"]."','".$_POST["nazwisko"]."', '".$_POST['password']."', '".$_POST['Email']."', '0');";
                 $con->query($sqlquery);
                 header('location: login.php');
             }
