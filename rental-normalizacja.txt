@@ -1,0 +1,51 @@
+1. Co to normalizacja baz danych i na czym to polega? 
+
+Normalizacja baz danych jest procesem, który polega na strukturyzacji bazodanowej, a dotyczy zwykle relacyjnych baz danych. 
+Ma związek z wykorzystaniem tak zwanych postaci normalnych, których celem jest zmniejszenie nadmiarowości danych oraz wsparcie ich integralności.  
+
+Proces ten pozwala projektować, jak również organizować każdą kolumnę (atrybuty) oraz tabelę (relacje) konkretnej bazy. 
+Celem rozbudowanych działań normalizacyjnych jest także zapewnienie poprawnego wymuszania zależności pomiędzy nimi bez zbędnej redundancji. 
+Istnieje szereg reguł formalnych, których właściwa implementacja pozwala rozbić poszczególne rekordy celem sprawniejszego działania systemu. 
+
+2. Po co jest stosowana normalizacja baz danych? 
+
+Okazuje się, że gromadzenie nadmiarowych danych przyczynia się do marnowania przestrzeni dyskowej oraz kłopotów z wydajnością. Jeżeli zmieniamy dane w jednym miejscu, muszą one zostać zmienione w ten sam sposób w innych lokalizacjach. 
+O wiele łatwiej zmienić konkretną informację (np. adres klienta), jeśli przechowuje się ją wyłącznie w jednej konkretnej tabeli (np. klienci).
+O ile przechowywanie adresów w sekcji poświęconej klientom ma sens, o tyle nie powinny się tam już znaleźć informacje na temat wynagrodzeń pracowników. 
+Gdy dane nie są spójne, dochodzić może do skomplikowanych problemów w kontekście odnalezienia interesujących nas informacji. 
+Tego typu niespójności zależności należy unikać i właśnie temu służą procesy normalizacyjne. W modelach relacyjnych chodzi przecież o łatwe łączenie i odnajdywanie danych według właściwie określonego klucza.
+Jeszcze raz powołać się musimy na Codda, który w ramach określania procesu normalizacji zaproponował kluczowe pojęcie. 
+Chodzi o postaci normalne (zwane też formami normalnymi), które określają reguły, wedle jakich należy przestrzegać normalizacji. 
+To dzięki nim uda się uniknąć wszelkich anomalii wynikających z nadmiarowego lub błędnego zarządzania danymi. 
+
+3. Pierwsza postać normalna 1NF 
+
+Wśród najważniejszych czynników określających zasadę działania tej reguły, należy wymienić: 
+
+-Usunięcie powtarzających się grup w ramach pojedynczych tabel.
+-Tworzenie oddzielnej tabeli dla pojedynczego zestawu danych relacyjnych.
+-Określenie każdego z zestawów dzięki kluczowi podstawowemu. 
+
+Każda komórka to konkretna informacja, co zapewnia najbardziej efektywną pracę z zapytaniami. 
+Dzięki tej podstawowej formie pojawia się też klucz główny.
+
+4. Druga postać normalna 2NF 
+
+Wprowadzenie drugiej postaci normalnej ma na celu przede wszystkim: 
+
+-Budowę osobnych tabel dla zestawów wartości powiązanych z wieloma zapisami.
+-Ustalenie relacji pomiędzy tabelami przy użyciu klucza obcego.  
+
+Zgodnie z teorią tej reguły, poszczególne zapisy powinny być zależne wyłącznie od klucza głównego konkretnej tabeli. 
+
+5. Trzecia postać normalna 3NF 
+
+Głównym celem implementacji tej formy w swojej relacyjnej bazie danych jest: 
+
+-Usunięcie pół, które nie zależą od klucza. 
+ 
+Jeżeli wartości zapisu nie stanowią części klucza rekordu, wówczas nie powinny się tam znajdować. 
+Ogólnie rzecz biorąc, zawsze, gdy zawartość grup lub pól dotyczy więcej niż jednego rekordu w tabeli, warto przenieść je do osobnej encji.
+
+
+
