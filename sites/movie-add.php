@@ -8,14 +8,14 @@
     <?php
         include "../includes/header.php";
         echo '<form method="POST">';
-        $res = $con->query("SELECT * FROM film");
-        $cos = $res->fetch_all();
+        // $res = $con->query("SELECT * FROM film");
+        // $cos = $res->fetch_all();
 
         echo '<h1>Dodaj film:</h1>
         <div class="details">Nazwa: <input name="nazwa"><br>
         Typ: <input name="typ"><br>
-        Opis: <input name="opis"><br>
-        foto: <input name="foto" type="file"> </div>';
+        Opis: <input name="opis"><br>';
+        
         echo '<input type="submit">';
         echo '<br><a href="../index.php?page=1">Strona Główna</a>';
         echo '</form>';
@@ -28,7 +28,7 @@
                 $con->query($sqlquery);
                 $wartosc=$con->insert_id;
 
-                $sqlquery2 = "INSERT INTO `user_has_film` VALUES ('".$_SESSION["id"]."','".$wartosc."');";
+                $sqlquery2 = "INSERT INTO `user_has_film` (User_id,Film_id) VALUES ('".$_SESSION["id"]."','".$wartosc."');";
                 $con->query($sqlquery2);
                 header('location: ../index.php?page=1');
             }

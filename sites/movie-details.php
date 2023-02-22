@@ -15,8 +15,8 @@
         echo '<h1>Szczegóły:</h1>
         <div class="details">Nazwa: '.$cos[$_GET["id"]][1].'<br>
         Typ: '.$cos[$_GET["id"]][3].'<br>
-        Opis: '.$cos[$_GET["id"]][2].'<br>
-        foto </div>';
+        Opis: '.$cos[$_GET["id"]][2].'<br>';
+        
         echo '<br><a href="../index.php?page=1">Strona Główna</a>';
         echo '</form>';
     ?>
