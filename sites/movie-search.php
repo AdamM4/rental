@@ -37,7 +37,7 @@
         {
             if($cos22[$i][1]==$_SESSION["search"] || $cos22[$i][2]==$_SESSION["search"] || $cos22[$i][3]==$_SESSION["search"])
             {
-                echo '<div class="blok"><div class="lewy">Nazwa: '.$cos22[$i][1].'<br>Typ: '.$cos22[$i][3].'<br> Opis: '.$cos22[$i][2].'<br></div><div class="prawy">foto</div><div class="lewydol"><a href="sites/movie-details.php?id='.$i.'">Szczegóły</a></div></div><br>';
+                echo '<div class="blok"><div class="lewy">Nazwa: '.$cos22[$i][1].'<br>Typ: '.$cos22[$i][3].'<br> Opis: '.$cos22[$i][2].'<br></div><div class="lewydol"><a href="sites/movie-details.php?id='.$i.'">Szczegóły</a></div></div><br>';
             }
         }
         echo '<br><div class="dol">';

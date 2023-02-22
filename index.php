@@ -26,6 +26,7 @@
         {
             echo '<div class="blokGlownyDuzy"><h1>Wypożyczalnia Filmów</h1>';
             echo '<div class="panel">
+            <a href="sites/movie-add.php">Dodaj film</a>
             <a href="sites/login.php">Zaloguj sie</a>
             <a href="sites/register.php">Zarejestruj sie</a>';
         }
