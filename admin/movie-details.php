@@ -27,7 +27,7 @@
                 $sqlquery2 = "DELETE FROM `user_has_film` WHERE `user_has_film`.`film_id` = ".$cos[$_GET["id"]][0]."";
                 $con->query($sqlquery2);
 
-                $sqlquery = "DELETE FROM `film` WHERE `film`.`id` = ".$cos[$_GET["id"]][0]."";..
+                $sqlquery = "DELETE FROM `film` WHERE `film`.`id` = ".$cos[$_GET["id"]][0]."";
                 $con->query($sqlquery);
                 header('location: ../index.php?page=1');
             }

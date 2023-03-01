@@ -72,7 +72,7 @@
         {
         if($_SESSION["admin"]==1)
         {
-            echo '<br>panel admina<br> <a href="admin/add-admin.php">Dodaj nowego Administratora</a><a href="admin/movie-list.php?page=1">Lista Wszystkich Filmów</a>';..
+            echo '<br>panel admina<br> <a href="admin/add-admin.php">Dodaj nowego Administratora</a><a href="admin/movie-list.php?page=1">Lista Wszystkich Filmów</a>';
         }
         }
     ?>
